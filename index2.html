@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Moro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image.png" type="image/png">
+
+    <!-- MAPA -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 500px; /* Altura del mapa */
+            width: 100%; /* Ancho del mapa */
+        }
+    </style>
+
+</head>
+<body>
+    <header> 
+        <div class="main-header-container">
+            <div class="main-header-logo-container">
+                <h1 class="main-header-logo-h1"> 
+                    <img src="image.png" alt="logo" class="main-header-logo-img"> 
+                    EL MORO 
+                </h1>
+            </div>
+            <div class="main-header-options-container">
+                <ul class="main-header-options-list">
+                    <li class="main-header-options-li"> <a class="main-header-options-a" href="#inicio">Inicio</a></li>
+                    <li class="main-header-options-li"> <a onclick="window.location.href='nosotros.html';" class="main-header-options-a" href="#Nosotros">Nosotros</a></li>
+                    <li class="main-header-options-li"> <a class="main-header-options-a" href="#Productos">Productos</a></li>
+                    <li class="main-header-options-li"> <a class="main-header-options-a" href="#Ofertas">Ofertas</a></li>
+                    <li class="main-header-options-li"> <a class="main-header-options-a" href="#Contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-family-header-container">
+            <button class="product-family-header-button"> Res </button>
+            <button class="product-family-header-button"> Cerdo </button>
+            <button class="product-family-header-button"> Menudencias </button>
+            <button class="product-family-header-button"> Preparados </button>
+            <button onclick="window.location.href='#Ofertas';" class="product-family-header-button"> Ofertas </button>
+        </div>
+    </header>
+
+    <video autoplay muted loop style="width: 100%; height: 100%; top: 0;;" id="inicio"> 
+        <source src="video_carne.mp4"type="video/mp4">
+    </video>
+
+    <!-- <div style="height: 0px;" id="inicio"> </div> -->
+
+    <div style="height: 80px" id="Ofertas"> </div>
+
+    <div class="section-container">
+        <h1> 
+            Ofertas
+        </h1>
+
+
+        <div class="product-line">
+            <div class="product-card">
+                <img src="image.png" alt="product" class="product-card-img" style="border-style: solid; border-color:lightgray; border-width:1px; border-radius:8px">
+                <h2 class="product-card-h2"> 
+                    Producto 1
+                </h2>
+                <p style="font-size:small; color:gray">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit asperiores doloribus, laboriosam delectus aliquam totam ipsum mollitia ipsa, officia architecto, aperiam accusamus voluptatum assumenda esse quae facilis blanditiis harum perspiciatis?
+                </p>
+                <p style="font-size:large"> 
+                    <span style="text-decoration:line-through; color:red; font-size:medium; margin-right:20px"> $999999999 </span>$0000000
+                </p>
+            </div>
+
+            <div class="product-card">
+                <img src="image.png" alt="product" class="product-card-img" style="border-style: solid; border-color:lightgray; border-width:1px; border-radius:8px">
+                <h2 class="product-card-h2"> 
+                    Producto 2
+                </h2>
+                <p style="font-size:small; color:gray">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit asperiores doloribus, laboriosam delectus aliquam totam ipsum mollitia ipsa, officia architecto, aperiam accusamus voluptatum assumenda esse quae facilis blanditiis harum perspiciatis?
+                </p>
+                <p style="font-size:large"> 
+                    <span style="text-decoration:line-through; color:red; font-size:medium; margin-right:20px"> $999999999 </span>$0000000
+                </p>
+            </div>
+
+            <div class="product-card">
+                <img src="image.png" alt="product" class="product-card-img" style="border-style: solid; border-color:lightgray; border-width:1px; border-radius:8px">
+                <h2 class="product-card-h2"> 
+                    Producto 3
+                </h2>
+                <p style="font-size:small; color:gray">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit asperiores doloribus, laboriosam delectus aliquam totam ipsum mollitia ipsa, officia architecto, aperiam accusamus voluptatum assumenda esse quae facilis blanditiis harum perspiciatis?
+                </p>
+                <p style="font-size:large"> 
+                    <span style="text-decoration:line-through; color:red; font-size:medium; margin-right:20px"> $999999999 </span>$0000000
+                </p>
+            </div>
+
+            <div class="product-card">
+                <img src="image.png" alt="product" class="product-card-img" style="border-style: solid; border-color:lightgray; border-width:1px; border-radius:8px">
+                <h2 class="product-card-h2"> 
+                    Producto 4
+                </h2>
+                <p style="font-size:small; color:gray">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit asperiores doloribus, laboriosam delectus aliquam totam ipsum mollitia ipsa, officia architecto, aperiam accusamus voluptatum assumenda esse quae facilis blanditiis harum perspiciatis?
+                </p>
+                <p style="font-size:large"> 
+                    <span style="text-decoration:line-through; color:red; font-size:medium; margin-right:20px"> $999999999 </span>$0000000
+                </p>
+            </div>
+
+            <div class="product-card">
+                <img src="image.png" alt="product" class="product-card-img" style="border-style: solid; border-color:lightgray; border-width:1px; border-radius:8px">
+                <h2 class="product-card-h2"> 
+                    Producto 5
+                </h2>
+                <p style="font-size:small; color:gray">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit asperiores doloribus, laboriosam delectus aliquam totam ipsum mollitia ipsa, officia architecto, aperiam accusamus voluptatum assumenda esse quae facilis blanditiis harum perspiciatis?
+                </p>
+                <p style="font-size:large"> 
+                    <span style="text-decoration:line-through; color:red; font-size:medium; margin-right:20px"> $999999999 </span>$0000000
+                </p>
+            </div>
+        </div>
+
+        <button onclick="window.location.href='ofertas.html';" style="text-align:center; color: black; background-color:transparent;padding:10px; border-style: solid; border-color:black;border-width: 1px; border-radius:8px; cursor: pointer;font-size:medium"> Ver más </button>
+    </div>
+
+    <div style="height: 80px" id="Productos"> </div>
+
+    <div class="section-container">
+        <h1> 
+            Productos
+        </h1>
+
+        <p> 
+            Ver productos por categoría:
+        </p>
+
+        <div class="product-family-header-container" style="background-color: transparent; border-style: none; width: 100%;">
+            <button class="product-family-header-button" style="color: black; border-color: black;"> Res </button>
+            <button class="product-family-header-button" style="color: black; border-color: black;"> Cerdo </button>
+            <button class="product-family-header-button" style="color: black; border-color: black;"> Menudencias </button>
+            <button class="product-family-header-button" style="color: black; border-color: black;"> Preparados </button>
+            <button class="product-family-header-button" style="color: black; border-color: black;"> Ofertas </button>
+        </div>
+
+    </div>
+
+    <div style="height: 80px"> </div>
+
+    <div class="section-container"> 
+        <h1> Locales </h1>
+        <div style="border-radius: 8px" id="map"></div>
+        <script>
+            const map = L.map('map').setView([-24.797049551280985, -65.42182384991457], 13);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+
+            L.marker([-24.76480669523032, -65.40718254965915]).addTo(map)
+                .bindPopup('Carnicería El Moro <br> Zuviria 2036, Salta <br> Atención: lu-sab: 8:00-13:30 / 6:30-21:30<br> Tel: FALTA')
+                .openPopup();
+
+            L.marker([-24.817817097273988, -65.40736644093187]).addTo(map)
+                .bindPopup('Carnicería El Moro <br> Avenida Monseñor Tavella 2285 Avenida Tavella y calle, Río Carapari, Salta <br> Atención: lu-sab: 8:00-13:30 / 6:30-21:30 <br> Tel: 0387155130330')
+                .openPopup();
+
+            L.marker([-24.8326990295289, -65.37517003416893]).addTo(map)
+                .bindPopup('Sede Central <br> Av. Rodriguez Durañona 1720, Salta <br> Atención: lu-sab: 8:00-13:30 / 6:30-21:30 <br> Tel: 03876839666')
+                .openPopup();
+            
+            L.marker([-24.80565289033773, -65.4192999063865]).addTo(map)
+                .bindPopup('Carnicería El Moro <br> Av. Paraguay 1251, Salta <br> Atención: lu-sab: 8:00-13:30 / 6:30-21:30 <br> Tel: 03875360458')
+                .openPopup();
+                
+        </script>
+    </div>
+
+    <div class="contact-section">
+        <h1 id="Contacto"> 
+            Contacto
+        </h1>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+        <p> x </p>
+    </div>
+</body>
+</html>

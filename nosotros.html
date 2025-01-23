@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Moro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image.png" type="image/png">
+
+    <!-- MAPA -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 500px; /* Altura del mapa */
+            width: 100%; /* Ancho del mapa */
+        }
+    </style>
+
+</head>
+
+<body> 
+    <header> 
+        <div class="main-header-container">
+            <div class="main-header-logo-container">
+                <h1 class="main-header-logo-h1"> 
+                    <img src="image.png" alt="logo" class="main-header-logo-img"> 
+                    EL MORO 
+                </h1>
+            </div>
+            <div class="main-header-options-container">
+                <ul class="main-header-options-list">
+                    <li class="main-header-options-li"> <a onclick="window.location.href='index2.html';" class="main-header-options-a" href="#inicio">Inicio</a></li>
+                    <li class="main-header-options-li"> <a class="main-header-options-a" href="#Nosotros">Nosotros</a></li>
+                    <li class="main-header-options-li"> <a onclick="window.location.href='index2.html#Productos';" class="main-header-options-a" href="#Productos">Productos</a></li>
+                    <li class="main-header-options-li"> <a onclick="window.location.href='ofertas.html';" class="main-header-options-a" href="#Ofertas">Ofertas</a></li>
+                    <li class="main-header-options-li"> <a class="main-header-options-a" href="#Contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-family-header-container">
+            <button class="product-family-header-button"> Res </button>
+            <button class="product-family-header-button"> Cerdo </button>
+            <button class="product-family-header-button"> Menudencias </button>
+            <button class="product-family-header-button"> Preparados </button>
+            <button onclick="window.location.href='ofertas.html';" class="product-family-header-button"> Ofertas </button>
+        </div>
+
+    </header>
+
+    <div style="height: 80px" id="Ofertas"> </div>
+
+    <div class="section-container"> 
+        <h1> Nosotros </h1>
+
+        <p> 
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit asperiores doloribus, laboriosam delectus aliquam totam ipsum mollitia ipsa, officia architecto, aperiam accusamus voluptatum assumenda esse quae facilis blanditiis harum perspiciatis?
+        </p>
+    </div>
+</body>
+</html>
